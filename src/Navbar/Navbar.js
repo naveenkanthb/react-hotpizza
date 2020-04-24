@@ -16,6 +16,9 @@ export default function Navbar() {
 const NavbarStyled = styled.div`
 background:${pizzaRed};
 padding:10px;
+position:fixed;
+width:100%;
+z-index:1;
 
 `
 const Logo = styled(Title)`

@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from 'styled-components'
 import Navbar from './Navbar/Navbar';
+import { Banner } from './Banner/Banner';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,6 +20,7 @@ function App() {
     <React.Fragment>
       <GlobalStyle />
       <Navbar />
+      <Banner />
       <div>
         hello react app
       </div>
