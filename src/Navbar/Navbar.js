@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
         <NavbarStyled>
             <Logo>
-                Hot Pizza 🍕
+                Hot Pizza <span role="img" aria-label="slice pizza">🍕</span>
             </Logo>
         </NavbarStyled>
     );

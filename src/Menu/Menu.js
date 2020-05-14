@@ -1,23 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
-import {foodItems} from '../Data/FoodData'
-import {Food,FoodGrid,FoodItem} from '../Menu/FoodGrid'
+import {foods} from '../Data/FoodData'
+import {Food,FoodGrid,FoodLabel} from '../Menu/FoodGrid'
 
-export default function Menu() {
+export default function Menu({setOpenFood}) {
     return (
         <MenuStyled>
-            <h1>menu</h1>
+        {Object.entries(foods).map(([sectionName, foods]) => (
+            <>
+            <h1> {sectionName} </h1>
             <FoodGrid>
-                {foodItems.map(food => (
-                    <Food img={food.img}>
-                        <FoodItem>
-                        {food.name}
-                        </FoodItem>
-                    </Food>
+                {foods.map(food => (
+                <Food
+                    img={food.img}
+                    onClick={() => setOpenFood(food.name)}
+                >
+                    <FoodLabel>
+                    <div>{food.name}</div>
+                    </FoodLabel>
+                </Food>
                 ))}
             </FoodGrid>
-        </MenuStyled>
-    )
+            </>
+        ))}
+    </MenuStyled>
+    );
 }
 
 const MenuStyled = styled.div`

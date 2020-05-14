@@ -20,7 +20,7 @@ export const foodItems = [
   },
   {
     name: "Tomato Pizza",
-    img: "/img/tomatoveggie.jpg",
+    img: "/img/tomatoveggie.jpg ",
     section: "Pizza",
     price: 2
   },
@@ -76,11 +76,13 @@ export const foodItems = [
   }
 ];
 
-// export const foods = foodItems.reduce((res, food) => {
-//   if (!res[food.section]) {
-//     res[food.section] = [];
-//   }
-//   res[food.section].push(food);
-//   return res;
-// }, {});
+export const foods = foodItems.reduce((res, food) => {
+  if (!res[food.section]) {
+    res[food.section] = [];
+  }
+  res[food.section].push(food);
+  console.log(res);
+  
+  return res;
+}, {});
 

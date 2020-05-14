@@ -7,7 +7,7 @@ grid-template-columns:1fr 1fr;
 grid-gap:20px;
 `
 
-export const FoodItem = styled.div`
+export const FoodLabel = styled.div`
 position:absolute;
 background-color:rgba(255, 255, 255, 0.8);
 padding:5px;
@@ -20,11 +20,17 @@ padding:10px;
 background-image:${ ({img}) => `url(${img})`};
 background-position:center;
 background-size:cover;
+transition-property:box-shadow filter margin-top;
+transition-duration:.1s;
 filter:contrast(75%);
+margin-top:5px;
 border-radius:10px;
-box-shadow:0px 0px 10px 3px grey;
+box-shadow:0px 0px 1px 3px grey;
 &:hover{
     cursor:pointer;
-    opacity:0.8;
+    box-shadow:0px 0px 10px 3px grey;
+    filter:contrast(100%);
+    margin-top:0px;
+    margin-bottom:5px;
 }
 `
